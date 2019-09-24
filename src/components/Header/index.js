@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 const Header = () => (
- <header id ="main-header">JHunt</header>
+ <header id ="main-header"> Pokemon List</header>
 );
 
 export default Header; 
