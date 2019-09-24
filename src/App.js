@@ -1,13 +1,14 @@
 import React from 'react';
+import Header from './components/Header'
+import './styles.css'
+import Main from './pages/main';
+import Routes from './routes';
 
-var responseReturn = "aaaaaaaaaaaa";
-
-function App() {     
-  return (
-    <div className="App">
-       Hello World! {responseReturn}
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <Header/>
+    <Routes/>
+  </div>
+);
 
 export default App;
