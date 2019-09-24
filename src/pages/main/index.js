@@ -24,14 +24,14 @@ export default class Main extends Component{
     };
 
     prevPage = () => {
-        const{page,results,pages} = this.state;
-        if(page == 0) return;
+        const{page} = this.state;
+        if(page === 0) return;
         const pageNumber = page-4;
         this.loadProducts(pageNumber);
     }
     nextPage = () => {
-        const{page,results,pages} = this.state;
-        if(page == pages) return;
+        const{page,pages} = this.state;
+        if(page === pages) return;
         const pageNumber = page+4;
         this.loadProducts(pageNumber);
     }
@@ -56,8 +56,8 @@ export default class Main extends Component{
                     </article>
                 ))}
                  <div className='actions'> 
-                    <button disabled={page == 0} onClick={this.prevPage}>Anterior</button>
-                    <button disabled={page == pages} onClick={this.nextPage}>Proximo</button>
+                    <button disabled={page === 0} onClick={this.prevPage}>Anterior</button>
+                    <button disabled={page === pages} onClick={this.nextPage}>Proximo</button>
                 </div>
             </div>         
   
